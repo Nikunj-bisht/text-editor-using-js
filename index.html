@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+
+
+</head>
+
+   <style>
+body{
+   background-color: black;
+}
+
+
+#container{
+
+display: inline;
+width:100% ;
+position: absolute;
+margin-top: 40px;
+}
+
+#button{
+text-align: center;
+
+width: 30px;
+height: 30px;
+margin-left: 25px;
+}
+
+#button.hover{
+
+   
+
+}
+
+#content{
+
+   width:794px;
+    height:1122px
+
+}
+#contentdiv{
+margin-top: 90px;
+display:flex ;
+position: absolute;
+ 
+}
+.mybutton{
+   border-radius: 30%;
+background-color: #47cf73;
+}
+
+.secondbutton{
+   border-radius: 30%;
+background-color: white;
+}
+
+.mybutton:hover{
+   transition: transform .2s;
+
+-ms-transform: scale(1.5); /* IE 9 */
+-webkit-transform: scale(1.5); /* Safari 3-8 */
+transform: scale(1.5); 
+}
+#listitems{
+
+background-color: white;
+margin-left: 40px;
+width: 400px;
+
+}
+#single::marker{
+   font-size: medium;
+}
+
+#single{
+font-size: 5%;
+border:1px solid black;
+width:80px;
+height: 120px;
+margin-bottom: 20px;
+
+}
+
+#single:hover{
+   transition: transform .2s;
+
+-ms-transform: scale(0.5);
+transform: scale(0.5); 
+
+
+}
+
+#savehtml{
+
+   width:auto;
+height: 30px;
+
+}
+
+
+   </style>  
+
+<body>
+
+<h1 style="color: white; text-align: center;"> Text Editor </h1>
+
+
+   <div id="container" >
+
+  <button type="button" data-cmd="bold" class="mybutton">
+   <i class="fas fa-bold" id="button" ></i>
+
+  </button>   
+
+  <button type="button" data-cmd="italic" class="mybutton">
+   <i class="fas fa-italic" id="button" ></i>
+  
+  </button>
+
+  <button type="button" data-cmd="underline" class="mybutton">
+    <i class="fas fa-underline" id="button" ></i> 
+  </button>
+
+  <button type="button" data-cmd="defaultParagraphSeparator" class="mybutton">
+   <i class="fas fa-align-justify" id="button" ></i> </button>
+
+ <button type="button" data-cmd="foreColor" class="mybutton">
+   <i class="fas fa-palette" id="button" ></i> </button>
+
+ <button type="button" data-cmd="undo" class="mybutton">
+   <i class="fas fa-undo" id="button" ></i> </button>
+
+ <button type="button" data-cmd="insertOrderedList" class="mybutton">
+   <i class="fas fa-list" id="button" ></i> </button>
+
+ <button type="button" data-cmd="createLink" class="mybutton">
+   <i class="fas fa-link" id="button" ></i> </button>
+
+ <button type="button" data-cmd="fontSize" class="mybutton">
+   <i class="fas fa-file-code" id="button" ></i> </button>
+
+
+<input type="button" id="savehtml" style="background-color: #47cf73;" value="Save file" >
+<input type="color" id="mycolors" value="select colors">
+<input type="number" id="numb">
+
+  <!-- <button>
+   <i class="fas fa-palette" id="button" data-cmd=""></i>  
+
+
+  </button>
+   -->
+
+
+   </div>
+   <div id="contentdiv">
+
+<iframe name="textfield" style="background-color: white;" id="content"></iframe>
+
+<div id="listitems">
+
+<h2 style="text-align: center; font-size: medium;">Saved content</h2>
+
+<ol class="ordered">
+
+
+</ol>
+
+</div>
+
+   </div>
+      
+
+</body>
+
+<script  src="./script.js">
+</script>
+
+
+</html>
